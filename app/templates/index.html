@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+{% block content %}
+
+<body>
+    <div class="container color">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="jumbotron">
+            <h2 class="head">PITCH CATEGORIES</h2>
+        </div>
+        <br>
+        <div class="row col-sm-9 col-xs-9 col-md-8 col-lg-8">
+            <br>
+            <div class="thumbnail blogs">
+                <h3><b>Dream Blogs</b></h3>
+                <img src="static/photos/dreams.jpg" alt="">
+                <br>
+                <p>Every great dream begins with a dreamer. Always remember, you have within you the strength, the
+                    patience, and the passion to reach for the stars to change the world.
+                    Read more at: https://www.brainyquote.com/quotes/harriet_tubman_310306?src=t_dreams</p>
+                <br>
+            </div>
+            <div class="thumbnail blogs">
+                <h3><b>Succeed Blogs</b></h3>
+                <img src="static/photos/succeed.jpg" alt="">
+                <br>
+                <p>"There are two types of people who will tell you that you cannot make a difference in this world:
+                    those who are afraid to try and those who are afraid you will succeed."
+
+                </p>
+                <br>
+            </div>
+            <div class="thumbnail blogs">
+                <h3><b>Motivational Blogs</b></h3>
+                <img src="static/photos/quote.jpg" alt="">
+                <br>
+                <p>“Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in
+                    your own powers you cannot be successful or happy.” —Norman Vincent Peale</p>
+                <br>
+            </div>
+            <div class="thumbnail blogs">
+                <h3><b>Hardwork Blogs</b></h3>
+                <img src="static/photos/hardwork.jpg" alt="">
+                <br>
+                <p>A dream doesn't become reality through magic; it takes sweat, determination and hard work.
+                    Read more at: https://www.brainyquote.com/quotes/colin_powell_385927?src=t_hard_work</p>
+                <br>
+            </div>
+        </div>
+        <div class="row col-sm-1 col-xs-1 col-md-1 col-lg-1"></div>
+        <div class="row col-sm-2 col-xs-2 col-md-3 col-lg-3" style="border-left: 3px black">
+            <!-- <div class="button btn btn-success">
+                        <a href="/subscribe" class="subscribe">Subscribe Here:</a>
+                    </div> -->
+            <br>
+            <br>
+            <!-- <div class="col-md-6"> -->
+            <div class="thumbnail">
+                <h2 class="view">View Posted Blogs:</h2>
+                {{macro.displayBlog(blogs)}}
+                <!-- <div class="col-md-3"> -->
+                    <!-- <div class="container"> -->
+                        <form button="submitQuote()" #blogForm=''>
+                      <div class="form-group">
+                        <label for="name"> Your Blog :</label>
+                        <textarea class="form-control" id="name" rows="4" name="name"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="author">Blog author:</label>
+                        <input type="text" class="form-control" id="author" name="name">
+                      </div>
+                      <div class="form-group">
+                        <label for="fan">Written by:</label>
+                          <input type="text" class="form-control" id="fan" name="name">
+                      </div>
+                      <button type="submit" id="go">Pitch</button>
+                        </form>
+                       <!-- </div>
+                </div> -->
+            </div>
+            <!-- </div> -->
+
+
+
+
+        </div>
+    </div>
+</body>
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Nunito');
+    body {
+        background: url(static/photos/wall.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .head {
+        color: black;
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 40px;
+        text-align: center;
+    }
+    .subscribe {
+        font-family: 'Nunito', sans-serif !important;
+    }
+    .blogs {
+        font-family: 'Nunito', sans-serif !important;
+        width: 620px;
+        color: black !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+    }
+    .blogs:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        transform: translateY(-7px);
+    }
+    p {
+        font-size: 15px;
+    }
+    h3 {
+        text-decoration-line: underline;
+    }
+    .view {
+        text-decoration-line: underline;
+        font-family: 'Nunito', sans-serif !important;
+    }
+    .thumbnail {
+        text-align: center;
+    }
+    .color {
+        color: black !important;
+        font-family: 'Nunito', sans-serif !important;
+    }
+</style>
+{% endblock %}
