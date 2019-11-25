@@ -9,7 +9,7 @@ app = create_app('production')
 
 
 migrate = Migrate(app,db)
-manager = Manager(app)
+migrate = Migrate(app,db)
 manager.add_command('db',MigrateCommand)
 manager.add_command('server',Server)
 
