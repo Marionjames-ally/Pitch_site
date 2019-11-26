@@ -21,7 +21,7 @@ def posts():
     likes = Upvote.query.all()
     user = current_user
     return render_template('pitch_display.html',posts=posts,likes=likes,user=user)
-    
+
 
 @main.route('/new_post',methods=['GET','POST'])
 @login_required
