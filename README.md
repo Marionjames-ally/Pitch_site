@@ -31,4 +31,4 @@
 
 ## license
 
-MIT &copy; marion 2019
+MIT &copy;MARION 2019
