@@ -23,9 +23,9 @@ def posts():
     return render_template('pitch_display.html',posts=posts,likes=likes,user=user)
 
 
-@main.route('/pitch',methods=['GET','POST'])
+@main.route('/new_post',methods=['GET','POST'])
 @login_required
-def pitch():
+def new_post():
     form = PostForm()
     if form.validate_on_submit():
         title = form.title.data
