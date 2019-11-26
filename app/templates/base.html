@@ -20,15 +20,6 @@
     {% block pitch %}
     {% endblock %}
 
-    {% block scripts %}
-    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/particles.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
-    <script src="particles.js" type="text/javascript"></script>
-    <script src="app.js" type="text/javascript"></script>
-
-    
-    {% endblock %}
 </div>
 </body>
 </html>
@@ -41,7 +32,7 @@
     }
     .overlay{
         background-color:#25222280;
-        margin-top: 30px;
+        margin-top: 150px;
     }
     .btn{
         padding:20px;
@@ -55,10 +46,24 @@
     font-size:50px;
     
 }
+.navbar{
+    background-color: #7db49680;
+}
 
 .lead{
     color:black;
     font-size: 40px;
     font-family: 'Chilanka', cursive;
+}
+li>a{
+    color: black;
+    font-size: xx-large;
+    font-weight: 50px;
+    margin-right: 30px;
+    font-family: 'Chilanka', cursive;
+}
+li>a:hover{
+    background-color: #25222280;
+    color: white;
 }
     </style>
