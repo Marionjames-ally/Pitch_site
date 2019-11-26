@@ -1,21 +1,33 @@
-{% extends 'bootstrap/base.html' %}
-{% block navbar%}
-{% include 'navbar.html' %}
-{% endblock %}
-{% block styles %}
-{{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% import 'bootstrap/wtf.html' as wtf %}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-{{simplemde.css}}
-{{simplemde.js}}
-{% endblock %}
-
-
-
-<link href="https://fonts.googleapis.com/css?family=Nunito|PT+Serif" rel="stylesheet">
-
+    {% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/particle.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+    {% endblock %}
+</head>
 <body>
-    <br>
+    {% block navbar %}
+    {% include 'navbar.html' %}
+    {% endblock %}
 
+    {% block content %}
+    {% endblock %}
+
+    {% block pitch %}
+    {% endblock %}
+
+    {% block scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/particles.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="particles.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+
+    
+    {% endblock %}
 
 </body>
+</html>

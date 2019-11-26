@@ -1,30 +1,22 @@
 import os
 
 class Config:
-    '''
-    General configuration parent class
-    '''
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-    SECRET_KEY = "marion"
-    # SQLALCHEMY_TRACK_MODIFICATIONS = False
-
-class ProdConfig(Config):
+    debug = True
+    SECRET_KEY = 'marion'
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 
-class DevConfig(Config):
-    
+    ##email config
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USER_TLS = True
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
-    DEBUG = True
+    ## simplemde configs
+    SIMPLEMDE_JS = True
+    SIMPLEMDE_USE_CDN = True
 
-class TestConfig(Config):
-    '''
-    child test configuration class
-    '''
+class prodConfig(Config):
     pass
-
-config_options = {
-'development':DevConfig,
-'production':ProdConfig,
-'test':TestConfig
-}
