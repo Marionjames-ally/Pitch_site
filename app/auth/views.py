@@ -24,7 +24,7 @@ def login():
             return render_template('login.html',error=error)
         login_user(user)
         return redirect('/')
-    return render_template('auth/login.html')
+    return render_template('/index.html')
 
 
       ##sign up content
