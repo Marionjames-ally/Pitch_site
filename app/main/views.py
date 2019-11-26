@@ -1,8 +1,9 @@
-from flask import render_template,redirect,url_for
+from flask import render_template,redirect,url_for,flash
 from flask_login import login_required,current_user
 from . import main
 from .forms import PostForm,CommentForm,UpdateProfile
-from ..models import Post,Comment,User,Upvote,Downvote
+from ..models import Post,Comment,User,Upvote,DownVote
+from .. import db
 
 @main.route('/')
 def index():
@@ -74,7 +75,7 @@ def updateprofile(name):
         user.bio = form.bio.data
         user.save()
         return redirect(url_for('.profile',name=name))
-    return render_template('profile/update_profile.html',form=form)
+    return render_template('update_profile.html',form=form)
 
 
 @main.route('/like/<int:id>',methods=['GET','POST'])
