@@ -22,8 +22,8 @@ def posts():
     user = current_user
     return render_template('pitch_display.html',posts=posts,likes=likes,user=user)
 
-
-@main.route('/new_post',methods=['GET','POST'])
+@main.route('/', defaults={'path': 'app/templates/pitch.html'})
+@main.route('/<path:path>',methods=['GET','POST'])
 @login_required
 def new_post():
     form = PostForm()
