@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 {% macro display_pitches(posts) %}
 
-<div class="container-fluid">
+<div id="display_pitch" class="container-fluid">
     <br>
     <br>
-    <div class="jumbotron">
         <div class="overlay">
             <h1 class="">Pitches</h1>
             <a href="/new_post"><button class="btn">New Pitch</button></a>
@@ -28,5 +27,4 @@
         {% endfor %}
         {% endif %}
     </div>
-</div>
 {% endmacro %}
