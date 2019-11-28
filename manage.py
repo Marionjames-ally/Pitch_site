@@ -2,10 +2,10 @@ from flask_migrate import Migrate,MigrateCommand
 from flask_script import Manager,Server
 from app import create_app
 from app import db
-from app.models import User,Post,Comment,DownVote
+# from app.models import User,Post,Comment,DownVote
 
-app = create_app('development')
-# app = create_app('production')
+app = create_app('production')
+
 
 manager = Manager(app)
 migrate = Migrate(app,db)
