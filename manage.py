@@ -4,7 +4,7 @@ from app import create_app
 from app import db
 from app.models import User,Post,Comment,DownVote
 
-app = create_app('development')
+# app = create_app('development')
 app = create_app('production')
 
 manager = Manager(app)
