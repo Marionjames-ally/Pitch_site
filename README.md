@@ -9,6 +9,13 @@
 ## SCREENSHOTS
 
 ![LANDING PAGE](https://github.com/Marionjames-ally/Pitch_site/blob/master/app/static/pics/save.png?raw=true)
+- LANDING PAGE
+
+![SIGN_UP PAGE](https://github.com/Marionjames-ally/Pitch_site/blob/master/app/static/pics/sign.png?raw=true)
+- SIGN_UP PAGE
+
+![LOGIN_PAGE](https://github.com/Marionjames-ally/Pitch_site/blob/master/app/static/pics/login.png?raw=true)
+- LOGIN_PAGE
 
 ## CONTRIBUTERS
 
