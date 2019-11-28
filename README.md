@@ -8,7 +8,7 @@
 
 ## SCREENSHOTS
 
-![LANDING PAGE]()
+![LANDING PAGE](https://github.com/Marionjames-ally/Pitch_site/blob/master/app/static/pics/save.png?raw=true)
 
 ## CONTRIBUTERS
 
