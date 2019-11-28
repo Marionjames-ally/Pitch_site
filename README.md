@@ -6,6 +6,10 @@
 
 - Marion James
 
+## SCREENSHOTS
+
+![LANDING PAGE]()
+
 ## CONTRIBUTERS
 
 - Github
